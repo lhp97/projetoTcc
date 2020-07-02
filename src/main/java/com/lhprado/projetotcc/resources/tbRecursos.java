@@ -6,10 +6,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/dados")
-public class tb_recursos {
+public class tbRecursos {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public String listar() {
+		
+	
+		
 		return "REST está Funcionando";
 	}
 	
