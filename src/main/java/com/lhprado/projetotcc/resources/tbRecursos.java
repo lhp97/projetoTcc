@@ -10,9 +10,7 @@ public class tbRecursos {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public String listar() {
-		
-	
-		
+			
 		return "REST está Funcionando";
 	}
 	
