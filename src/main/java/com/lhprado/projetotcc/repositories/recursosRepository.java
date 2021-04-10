@@ -12,5 +12,5 @@ public interface recursosRepository extends JpaRepository<tblrecursos, Integer>{
 
   List<tblrecursos> findAll();
   
-  
+
 }

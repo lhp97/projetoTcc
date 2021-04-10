@@ -21,10 +21,10 @@ public class tblrecursos implements Serializable {
 	private Integer id;
 	
 	@Column(nullable = false)
-	private String vlram;
-	private String vlcpu;
-	private String vldisco;
-	private String datatmp;
+	private String memoria_ram;
+	private String cpu;
+	private String disco;
+	private String data_tmp;
 	
 	
 	//Construtor vazio da Classe - com ele é possível instanciar os objetos sem jogar nada para os atributos
@@ -32,21 +32,16 @@ public class tblrecursos implements Serializable {
 	}
 
 	//Construtor com os atributos - para receber e povoar os atributos: id, vl_ram, vl_cpu e vl_disco
-	public tblrecursos(Integer id, String vlRam, String vlCpu, String vlDisco) {
+	public tblrecursos(Integer id, String memoriaRam, String cpu, String disco) {
 		super();
 		this.id = id;
-		this.vlram = vlRam;
-		this.vlcpu = vlCpu;
-		this.vldisco = vlDisco;
-	}
-	
-	//Getters e Setters - métodos de acessos para os atributos privados
-	
+		this.memoria_ram = memoriaRam;
+		this.cpu = cpu;
+		this.disco = disco;
+	}	
 
-	//Geramento dos HashCode e Equals - para comparar o conteudo dos objetos e não pela sua posição de memória - usar somento ID (cd_recurso)
-	
-	//HashCode - Gerando um código para cada Objeto
-		
+	//HashCode e Equals - comparar o conteudo dos objetos e não pela sua posição de memória - usar somento ID (cd_recurso)
+			
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -55,7 +50,7 @@ public class tblrecursos implements Serializable {
 		return result;
 	}
 
-	//Equals - método que ira comparar dois objetos considerandos diverssas possibilidades (nulo, etc)
+	//Equals - método que ira comparar dois objetos considerando diverssas possibilidades (nulo, etc)
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -72,7 +67,8 @@ public class tblrecursos implements Serializable {
 			return false;
 		return true;
 	}
-
+	
+	//Getters e Setters
 	public Integer getId() {
 		return id;
 	}
@@ -81,38 +77,39 @@ public class tblrecursos implements Serializable {
 		this.id = id;
 	}
 
-	public String getVlram() {
-		return vlram;
+	public String getMemoria_ram() {
+		return memoria_ram;
 	}
 
-	public void setVlram(String vlram) {
-		this.vlram = vlram;
+	public void setMemoria_ram(String memoria_ram) {
+		this.memoria_ram = memoria_ram;
 	}
 
-	public String getVlcpu() {
-		return vlcpu;
+	public String getCpu() {
+		return cpu;
 	}
 
-	public void setVlcpu(String vlcpu) {
-		this.vlcpu = vlcpu;
+	public void setCpu(String cpu) {
+		this.cpu = cpu;
 	}
 
-	public String getVldisco() {
-		return vldisco;
+	public String getDisco() {
+		return disco;
 	}
 
-	public void setVldisco(String vldisco) {
-		this.vldisco = vldisco;
+	public void setDisco(String disco) {
+		this.disco = disco;
 	}
 
-	public String getDatatmp() {
-		return datatmp;
+	public String getData_tmp() {
+		return data_tmp;
 	}
 
-	public void setDatatmp(String datatmp) {
-		this.datatmp = datatmp;
+	public void setData_tmp(String data_tmp) {
+		this.data_tmp = data_tmp;
 	}
 
+	
 	
 
 	

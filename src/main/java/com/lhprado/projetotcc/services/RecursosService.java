@@ -20,8 +20,8 @@ public class RecursosService {
 		return obj.orElse(null);
 	}
 	
-public List<tblrecursos> todos(){
-	return repo.findAll();
-}
+	public List<tblrecursos> todos(){
+		return repo.findAll();
+	}
 	
 }

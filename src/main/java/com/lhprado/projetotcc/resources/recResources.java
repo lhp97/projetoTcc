@@ -14,19 +14,20 @@ import com.lhprado.projetotcc.services.RecursosService;
 
 @RestController
 @RequestMapping(value="/Recursos")
-public class RecursosResources {
+public class recResources {
 	
 	@Autowired
 	private RecursosService service;
 	
-	@RequestMapping(value="/{id}", method=RequestMethod.GET)
+	//Realiza a requisição passando um ID especifico no fim do EndPoint
+	@RequestMapping(value="{id}", method=RequestMethod.GET)
 	public ResponseEntity<?> find(@PathVariable Integer id){
 		tblrecursos obj = service.find(id);
 		
 		return ResponseEntity.ok().body(obj);
 	}
 	
-	
+	//Realiza a requisição de todos os itens
 	@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<?> findTodos(){		
 		return ResponseEntity.ok().body(service.todos());
